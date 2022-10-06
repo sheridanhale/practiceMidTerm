@@ -63,8 +63,8 @@ infile.readline()
 for rec in csvFile:
     if int(rec[0]) == play.get_id():
         if play.get_seats() > 0:
-            book = p.booking(rec[1],play.get_seats())
-            print(book.get_seat_number())
+            Book = p.Booking(rec[1],play.get_seats())
+            print(Book.get_seat_number())
             play.seats_left()
         else:
             print('\n***ERROR***')
