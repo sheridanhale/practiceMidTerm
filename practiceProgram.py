@@ -30,6 +30,14 @@ shows = {
 
 }
 
+#using the above dictionary iterate through it and create an instance of the play class that has id 9587
+For i in shows:
+    Dict = 1
+    For key in dict:
+        If key = "Id":
+            If Id = "9587":
+            Id = 9587
+
 '''using the above dictionary iterate through it and create an instance of the 
 play class that has id 9587
 NOTE: Do not hard code the values to create the instance but use
@@ -46,11 +54,13 @@ error message as shown in output.JPG'''
 
 
 #open the csv file in read mode
-
+import csv
+with open('bookings.csv', mode = 'r') as file:
 
 #create a csv object from the file object from the step above
-
-
+    csvfile = csv.reader(file)
 
 # use a for loop to iterate through each record in the bookings file
 
+for row in csvfile:
+    print(row)
