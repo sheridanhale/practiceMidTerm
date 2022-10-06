@@ -15,17 +15,27 @@ seat number. Create accessor methods for both attributes.'''
 #a Play class that has attributes for id, name, number of seats, date and status
 
 class Play:
-    def __init__(id,name,seats,date,status):
+    def __init__(self,id,name,seats,date):
         self.__id = id
         self.__name = name
         self.__seats = seats
         self.__date = date
-        self.__status = TRUE
+        self.__status = True
 
 #Create an accessor method each for the name, seats and status attributes only.
-    def accessor1(self):
+    def get_ID (self):
+        return self.__id
+
+    def get_name (self):
         return self.__name
+
+    def get_seats (self):
         return self.__seats
+
+    def get_date (self):
+        return self.__date
+
+    def get_status (self):
         return self.__status
 
 #Create a method called 'seats_left' that will reduce the number of seats by 1 every time it is called.
@@ -34,18 +44,18 @@ class Play:
 
 #Create a mutator method called 'set_status' that will change the status attribute to False.
     def set_status(self):
-        self.__status = FALSE
+       self.__status = False
 
-
-# Booking class that has attributes for customer name and seat number. Create accessor methods for both attributes.'''
+# Booking class that has attributes for customer name and seat number. Create accessor methods for both attributes.''
 class Booking:
-    def __init__(customer_name,seat_number):
-        self.__customer_name = customer_name
-        self.__seat_number = seat_number
+    def __init__(self,customer_name,seat_number):
+         self.__customer_name = customer_name
+         self.__seat_number = seat_number
     
 #Create accessor methods for both attributes.''' 
-    def accessor2(self):
+    def get_name(self):
         return self.__customer_name
+    def get_seat_number(self):
         return self.__seat_number
         
 

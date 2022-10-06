@@ -31,12 +31,11 @@ shows = {
 }
 
 #using the above dictionary iterate through it and create an instance of the play class that has id 9587
-#For i in shows:
-   #Dict = 1
-   # For key in dict:
-   #     If key = "Id":
-       #     If Id = "9587":
-      #      Id = 9587
+for x in shows:
+    if shows[x]['id'] == 9587:
+        play =p.Play(shows[x]['id'],shows[x]['name'],shows[x]['capacity'],shows[x]['event_date'])
+        #print(shows[x]['id'])
+
 
 '''using the above dictionary iterate through it and create an instance of the 
 play class that has id 9587
@@ -54,13 +53,22 @@ error message as shown in output.JPG'''
 
 
 #open the csv file in read mode
-import csv
-with open('bookings.csv', mode = 'r') as file:
+infile = open('bookings.csv','r')
 
 #create a csv object from the file object from the step above
-    csvfile = csv.reader(file)
+csvFile = csv.reader(infile,delimeter=',')
+infile.readline()
 
 # use a for loop to iterate through each record in the bookings file
+for rec in csvFile:
+    if int(rec[0]) == play.get_ID():
+        if play.get_seats() > 0:
+            book = p.booking(rec[1],play.get_seats())
+            print(book.get_seat_number())
+            play.seats_left()
+        else:
+            print('\n***ERROR***')
+            print('Guest Name:', rec[1])
+            print('Sorry, show', play.get_name(), 'is sold out')
+            print('***')
 
-for row in csvfile:
-    print(row)
