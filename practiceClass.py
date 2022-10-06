@@ -23,8 +23,8 @@ class Play:
         self.__status = True
 
 #Create an accessor method each for the name, seats and status attributes only.
-    #def get_ID (self):
-        #return self.__id
+    def get_id (self):
+        return self.__id
 
     def get_name (self):
         return self.__name
@@ -32,8 +32,8 @@ class Play:
     def get_seats (self):
         return self.__seats
 
-    #def get_date (self):
-        #return self.__date
+    def get_date (self):
+        return self.__date
 
     def get_status (self):
         return self.__status

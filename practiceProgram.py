@@ -61,7 +61,7 @@ infile.readline()
 
 # use a for loop to iterate through each record in the bookings file
 for rec in csvFile:
-    if int(rec[0]) == play.get_ID():
+    if int(rec[0]) == play.get_id():
         if play.get_seats() > 0:
             book = p.booking(rec[1],play.get_seats())
             print(book.get_seat_number())
