@@ -31,12 +31,12 @@ shows = {
 }
 
 #using the above dictionary iterate through it and create an instance of the play class that has id 9587
-For i in shows:
-    Dict = 1
-    For key in dict:
-        If key = "Id":
-            If Id = "9587":
-            Id = 9587
+#For i in shows:
+   #Dict = 1
+   # For key in dict:
+   #     If key = "Id":
+       #     If Id = "9587":
+      #      Id = 9587
 
 '''using the above dictionary iterate through it and create an instance of the 
 play class that has id 9587
